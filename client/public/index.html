@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Cors</title>
+  </head>
+
+  <body>
+    <h1>CORS DEMO ❌</h1>
+
+    <div>
+      <p>
+        This request will fail because server does not have
+        <strong>Access-Control-Allow-Origin</strong> header present in response
+      </p>
+      <button id="blockedRequest">Make cors blocked request</button>
+    </div>
+
+    <div>
+      <p>
+        This request will be a success because server has
+        <strong>Access-Control-Allow-Origin</strong> header present in response
+      </p>
+      <button id="successRequest">Make cors success request</button>
+    </div>
+
+    <div>
+      <p>
+        This request will make a <strong>preflight request</strong> to server
+        first because
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests"
+          >Access-Control-Allow-Origin</a
+        >
+        the reason mentioned in mdn
+      </p>
+      <button id="preflightRequest">Make cors request with preflight</button>
+    </div>
+
+    <div>
+      <p>
+        Now we make request with cookie attahed in header
+      </p>
+      <button id="cookieRequest">Make cors request with preflight</button>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
